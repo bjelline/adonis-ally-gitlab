@@ -53,13 +53,12 @@ export class GitlabDriver extends Oauth2Driver<GitlabAccessToken, GitlabScopes> 
   protected scopesSeparator = '+'
 
   constructor(ctx: HttpContextContract, public config: GitlabDriverConfig) {
-    if(config.gitlabUrl) {
-      authorizeUrl = config.gitlabUrl + 'oauth/authorize'
-      accessTokenUrl = config.gitlabUrl + 'oauth/token'
-      userInfoUrl = config.gitlabUrl + 'api/v4/user'
-    }
     super(ctx, config)
-
+    if (config.gitlabUrl) {
+      this.authorizeUrl = config.gitlabUrl + 'oauth/authorize'
+      this.accessTokenUrl = config.gitlabUrl + 'oauth/token'
+      this.userInfoUrl = config.gitlabUrl + 'api/v4/user'
+    }
     this.loadState()
   }
 

@@ -1,10 +1,11 @@
 {
   "name": "adonis-ally-gitlab",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A Gitlab driver of AdonisJS Ally that also works for selfhosted gitlab",
   "main": "build/providers/index.js",
   "files": [
     "build/src",
+    "build/src/Gitlab",
     "build/providers",
     "build/providers/index.d.ts",
     "build/standalone.js",

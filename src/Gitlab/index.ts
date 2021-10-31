@@ -27,6 +27,7 @@ export type GitlabScopes =
 
 export type GitlabDriverConfig = {
   driver: 'gitlab'
+  gitlabUrl?: string
   clientId: string
   clientSecret: string
   callbackUrl: string
@@ -52,6 +53,11 @@ export class GitlabDriver extends Oauth2Driver<GitlabAccessToken, GitlabScopes> 
   protected scopesSeparator = '+'
 
   constructor(ctx: HttpContextContract, public config: GitlabDriverConfig) {
+    if(config.gitlabUrl) {
+      authorizeUrl = config.gitlabUrl + 'oauth/authorize'
+      accessTokenUrl = config.gitlabUrl + 'oauth/token'
+      userInfoUrl = config.gitlabUrl + 'api/v4/user'
+    }
     super(ctx, config)
 
     this.loadState()

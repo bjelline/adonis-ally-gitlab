@@ -6,6 +6,7 @@
   "files": [
     "build/src",
     "build/providers",
+    "build/providers/index.js",
     "build/standalone.js",
     "build/standalone.d.ts",
     "build/instructions.md"

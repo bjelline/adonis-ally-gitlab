@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/rubenmoya/adonis-ally-gitlab.git"
+    "url": "git+ssh://git@github.com/bjelline/adonis-ally-gitlab.git"
   },
   "bugs": {
     "url": "https://github.com/rubenmoya/adonis-ally-gitlab/issues"
